@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Start Page</title>
+    <style>
+        body {
+            background: url('/static/crop.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .content {
+            text-align: center;
+            margin-top: 20%;
+            text-font:14px;
+        }
+        #startButtonContainer {
+            text-align: left; /* Align button to the left */
+            margin-top: 40%;
+            margin-left: 10%; /* Add left margin for spacing */
+        }
+        #startButton {
+            width: 150px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            border: none;
+            cursor: pointer;
+            color: white; /* Text color */
+            font-size: 16px;
+        }
+        #startButton:hover {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div id="startButtonContainer">
+            <button id="startButton">Start</button>
+        </div>
+    </div>
+
+    <script>
+        const startButton = document.getElementById("startButton");
+
+        startButton.addEventListener("click", function () {
+            // Open your index page in a new window
+            window.open("/index", "_blank");
+        });
+    </script>
+</body>
+</html>
